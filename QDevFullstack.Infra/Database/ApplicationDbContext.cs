@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using QDevFullstack.Infra.Models;
 
 namespace QDevFullstack.Infra.Database
 {
@@ -10,6 +11,9 @@ namespace QDevFullstack.Infra.Database
             : base(options)
         {
         }
+
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<Comment> Comments { get; set; }
     }
 
 }
